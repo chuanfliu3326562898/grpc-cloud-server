@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "rpc.server",
+      "type": "com.config.ServerDto",
+      "sourceType": "com.config.ServerDto"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rpc.server.ip",
+      "type": "java.lang.String",
+      "sourceType": "com.config.ServerDto"
+    },
+    {
+      "name": "rpc.server.name",
+      "type": "java.lang.String",
+      "sourceType": "com.config.ServerDto"
+    },
+    {
+      "name": "rpc.server.port",
+      "type": "java.lang.String",
+      "sourceType": "com.config.ServerDto"
+    }
+  ],
+  "hints": []
+}

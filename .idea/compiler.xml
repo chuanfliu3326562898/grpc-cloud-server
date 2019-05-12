@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="8">
+      <module name="democlient" target="1.8" />
+      <module name="demofacade" target="1.8" />
+      <module name="demogrpcbase" target="1.8" />
+      <module name="demoserver" target="1.8" />
+      <module name="grpc.server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="democlient" options="-parameters" />
+      <module name="demofacade" options="-parameters" />
+      <module name="demogrpcbase" options="-parameters" />
+      <module name="demoserver" options="-parameters" />
+      <module name="grpc.server" options="-parameters" />
+    </option>
+  </component>
+</project>
