@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="grpc-cloud-server" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="demo.client" target="1.8" />
+      <module name="demo.facade" target="1.8" />
+      <module name="demo.grpc.base" target="1.8" />
+      <module name="demo.server" target="1.8" />
+      <module name="demo.server (1)" target="1.8" />
+      <module name="demo.server (2)" target="1.8" />
       <module name="democlient" target="1.8" />
       <module name="demofacade" target="1.8" />
       <module name="demogrpcbase" target="1.8" />
       <module name="demoserver" target="1.8" />
+      <module name="grpc-cloud-server" target="1.8" />
       <module name="grpc.server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo.client" options="-parameters" />
+      <module name="demo.facade" options="-parameters" />
+      <module name="demo.grpc.base" options="-parameters" />
+      <module name="demo.server" options="-parameters" />
+      <module name="demo.server (1)" options="-parameters" />
+      <module name="demo.server (2)" options="-parameters" />
       <module name="democlient" options="-parameters" />
       <module name="demofacade" options="-parameters" />
       <module name="demogrpcbase" options="-parameters" />
       <module name="demoserver" options="-parameters" />
+      <module name="grpc-cloud-server" options="-parameters" />
       <module name="grpc.server" options="-parameters" />
     </option>
   </component>

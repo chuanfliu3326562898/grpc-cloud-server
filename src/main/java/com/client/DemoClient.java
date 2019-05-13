@@ -1,17 +1,16 @@
 package com.client;
 
-import com.config.ServerDto;
+import com.biz.HelloService;
 import com.grpc.dto.DemoResponse;
 import com.grpc.dto.DemoRquest;
 import com.grpc.dto.DemoServerGrpc;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
-import io.grpc.StatusRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.*;
+import javax.annotation.PostConstruct;
 
 /**
  * 应用模块名称<p>
@@ -21,67 +20,44 @@ import java.util.concurrent.*;
  * Company: 跟谁学<p>
  * @Date: 2019-05-06
  */
-@Component
 @Slf4j
-public class DemoClient  {
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class DemoClient  implements HelloService {
     @Autowired
-    private ServerDto serverDto;
-    private ManagedChannel channel;
-    private DemoServerGrpc.DemoServerBlockingStub blockingStub;
-    private ExecutorService clientRpcPool;
+    private DemoClientPoolFactory demoClientPoolFactory;
 
-    public DemoClient(){
-        start();
-        getThreadPool();
+    protected DemoServerGrpc.DemoServerBlockingStub blockingStub;
+
+    @PostConstruct
+    public void postConstruct(){
+        System.out.println("demoClientProxyBase.channel:"+DemoClientProxyBase.channelPointer.channel==null);
     }
 
-    private ExecutorService getThreadPool() {
-        if (clientRpcPool == null) {
-            clientRpcPool = Executors.newFixedThreadPool(50);
-        }
-        return clientRpcPool;
-    }
-
-    public void start() {
-        log.info("DemoClient InitializingBean started");
-        channel = ManagedChannelBuilder.forAddress(serverDto.getIp(), Integer.parseInt(serverDto.getPort()))
-            // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
-            // needing certificates.
-            .usePlaintext().build();
-        blockingStub = DemoServerGrpc.newBlockingStub(channel);
-        log.info("DemoClient InitializingBean over");
-    }
-
-    public void shutdown() throws InterruptedException {
-        channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-    }
-
-    /** Say hello to server. */
-    public String hello(String name) throws Exception,InterruptedException{
-            log.info("rpc hello method call started");
-            DemoRquest request = DemoRquest.newBuilder().setCode(1).setMsg(name).build();
-            DemoResponse response;
+    @Override
+    public String hello(String input) {
+        blockingStub = DemoServerGrpc.newBlockingStub(DemoClientProxyBase.channelPointer.channel);
+        log.info("rpc hello method call started");
+        DemoRquest request = DemoRquest.newBuilder().setCode(1).setMsg(input).build();
+        DemoResponse response;
+        try {
+            response = blockingStub.hello(request);
+            return Thread.currentThread().getName() + response.getCode() + ":" + response.getMsg();
+        } catch (Exception e) {
+            log.error("rpc client call server fail :", e);
+            return "fail";
+        } finally {
             try {
-                response = blockingStub.hello(request);
-                return Thread.currentThread().getName()+response.getCode()+":"+response.getMsg();
-            } catch (StatusRuntimeException e) {
-                return "fail";
+                demoClientPoolFactory.returnObject(this);
+            } catch (Exception e) {
+                log.info("DemoClientPoolFactory.returnObject error ,e:" + e);
             }
-
-//        clientRpcPool.execute(()->{
-//            log.info("rpc hello method call started");
-//            DemoRquest request = DemoRquest.newBuilder().setCode(1).setMsg(name).build();
-//            DemoResponse response;
-//            try {
-//                response = blockingStub.hello(request);
-//                return Thread.currentThread().getName()+response.getCode()+":"+response.getMsg();
-//            } catch (StatusRuntimeException e) {
-//                return "fail";
-//            }
-//        });
+        }
     }
 
-    public static void main(String[] args) throws Exception{
-        new DemoClient().hello("test");
+    @Override
+    public String hello2(String input) {
+        // super.blockingStub.hello(request);
+        return null;
     }
 }

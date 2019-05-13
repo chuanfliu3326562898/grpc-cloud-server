@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/grpc.server.iml" filepath="$PROJECT_DIR$/grpc.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/grpc-cloud-server.iml" filepath="$PROJECT_DIR$/.idea/grpc-cloud-server.iml" />
     </modules>
   </component>
 </project>

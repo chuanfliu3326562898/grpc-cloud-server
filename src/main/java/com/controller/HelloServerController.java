@@ -1,6 +1,7 @@
 package com.controller;
 
-import com.client.DemoClient;
+import com.client.DemoClientPoolFactory;
+import com.aconfig.ServerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloServerController {
     @Autowired
-    DemoClient demoClient;
+    ServerDto serverDto;
+    @Autowired
+    DemoClientPoolFactory demoClientPoolFactory;
 
-    @GetMapping("/rpc")
-    public String rpc() throws Exception {
-        String result = demoClient.hello("test");
-        return result;
+    @GetMapping("/rpc") public String rpc() throws Exception {
+        String result=DemoClientPoolFactory.demoClientPoolFactory.borrowObject().hello("test");
+        return serverDto == null ? serverDto.getIp() : result;
     }
     @GetMapping("/test")
     public String test() throws Exception {

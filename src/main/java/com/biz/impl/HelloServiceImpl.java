@@ -15,4 +15,8 @@ public class HelloServiceImpl implements HelloService {
     @Override public String hello(String input) {
         return null;
     }
+
+    @Override public String hello2(String input) {
+        return null;
+    }
 }

@@ -1,4 +1,4 @@
-package com.server.dto;
+package com.aconfig;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -19,4 +19,7 @@ public class ServerDto {
     private String name;
     private String ip;
     private String port;
+    public ServerDto(){
+        System.out.println("SERVER DTO INITED");
+    }
 }

@@ -1,6 +1,6 @@
 package com.server;
 
-import com.config.ServerDto;
+import com.aconfig.ServerDto;
 import com.grpc.server.MyDemoServerImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
