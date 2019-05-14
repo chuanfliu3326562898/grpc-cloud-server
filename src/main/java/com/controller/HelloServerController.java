@@ -24,7 +24,7 @@ public class HelloServerController {
     DemoClientPoolFactory demoClientPoolFactory;
 
     @GetMapping("/rpc") public String rpc() throws Exception {
-        String result=DemoClientPoolFactory.demoClientPoolFactory.borrowObject().hello("test");
+        String result=demoClientPoolFactory.getInstance().borrowObject().hello("test");
         return serverDto == null ? serverDto.getIp() : result;
     }
     @GetMapping("/test")

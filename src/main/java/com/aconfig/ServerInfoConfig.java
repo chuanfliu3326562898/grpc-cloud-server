@@ -3,6 +3,8 @@
  */
 package com.aconfig;
 
+import com.client.DemoClientProxyBase;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -24,9 +26,9 @@ public class ServerInfoConfig {
 //        return new ServerDto();
 //    }
 
-//    @Bean
-//    public DemoClientProxyBase helloRpcDemoClientProxyBase() {
-//        return new DemoClientProxyBase();
-//    }
+    @Bean
+    public DemoClientProxyBase helloRpcDemoClientProxyBase() {
+        return new DemoClientProxyBase();
+    }
 
 }

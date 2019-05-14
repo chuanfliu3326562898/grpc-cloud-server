@@ -14,8 +14,14 @@ public class DemoClientPoolFactory extends BasePooledObjectFactory<DemoClient> {
 
     public static DemoClientPoolFactory demoClientPoolFactory;
 
+    public DemoClientPoolFactory(){
+        System.out.println("DemoClientPoolFactory inited");
+    }
+
     @PostConstruct
     public void init() {
+        System.out.println("DemoClientPoolFactory postInited");
+        getInstance();
         demoClientPoolFactory = this;
     }
 
@@ -25,11 +31,11 @@ public class DemoClientPoolFactory extends BasePooledObjectFactory<DemoClient> {
     public synchronized GenericObjectPool<DemoClient> getInstance() {
         if (pool == null) {
             GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
-            poolConfig.setMaxIdle(3);
-            poolConfig.setMaxTotal(3);
+            poolConfig.setMaxIdle(10);
+            poolConfig.setMaxTotal(10);
             poolConfig.setMinIdle(10);
             poolConfig.setLifo(false);
-            pool = new GenericObjectPool<DemoClient>(new DemoClientPoolFactory(), poolConfig);
+            pool = new GenericObjectPool<DemoClient>(this, poolConfig);
         }
         return pool;
     }

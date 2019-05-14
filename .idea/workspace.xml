@@ -2,72 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c200dc7a-0f72-42a7-af2b-45f0f407b35a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/democlient.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/src/main/java/com/DemoClientApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/src/main/java/com/config/HelloRpcClientConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/src/main/java/com/facade/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/src/main/java/com/facade/HelloServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.client/src/main/java/com/test/HelloServerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.facade/demofacade.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.facade/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.facade/src/main/java/facade/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.facade/src/main/java/facade/impl/HelloImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/demogrpcbase.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/annotation/GrpcService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/annotation/GrpcServiceScan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/client/DemoClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/config/GrpcAutoConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/config/GrpcProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/dto/GrpcRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/dto/GrpcResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/proxy/GrpcServiceProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/server/DemoServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/server/ServerContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/server/dto/ServerDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/status/GrpcResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.grpc.base/src/main/java/com/utils/ClassNameUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/demo.server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/demoserver.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/biz/impl/HelloServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/client/DemoClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/config/DemoServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/config/ServerDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/config/ServerInfoConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/controller/HelloServerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoRquest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoRquestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoServerGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/dto/DemoServerRpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.server/src/main/java/com/grpc/server/MyDemoServerImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biz/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biz/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biz/impl/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biz/impl/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/DemoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/DemoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/ServerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aconfig/ServerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/ServerInfoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/server/DemoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/server/DemoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/grpc.server.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/biz/HelloService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/biz/HelloService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/biz/HelloServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/biz/HelloServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/ServerDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/ServerInfoConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/server/DemoServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/server/DemoServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/server/DemoServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/server/DemoServer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/demo.grpc.base/target/" />
@@ -86,40 +27,48 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="34" />
+            <state relative-caret-position="44">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#1895#1896#0" expanded="true" />
-                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#1758#1759#0" expanded="true" />
+                <element signature="e#1821#1822#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/server/DemoServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="33" column="55" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="71">
+              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,11 +77,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/grpc/dto/DemoServerGrpc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
+            <state relative-caret-position="2363">
               <caret line="149" selection-start-line="149" selection-end-line="149" />
               <folding>
                 <element signature="e#4516#4517#0" expanded="true" />
                 <element signature="e#4544#4545#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/DemoApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,34 +110,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="286">
+              <caret line="36" column="35" selection-start-line="36" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DemoApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,12 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding>
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -197,11 +135,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="26" selection-start-line="26" selection-end-line="30" />
+            <state relative-caret-position="476">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -232,10 +172,11 @@
       <find>factory</find>
       <find>slf</find>
       <find>grpc.version</find>
-      <find>newBlockingStub</find>
       <find>server.*started</find>
       <find>DemoClient InitializingBean over</find>
       <find>demoClientProxyBase.channel</find>
+      <find>newBlockingStub</find>
+      <find>DemoClientPoolFactory postInited</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -285,16 +226,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/biz/HelloService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/client/JdbcUtilsPoolFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/biz/impl/HelloServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/config/ServerDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/config/ServerInfoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/server/DemoServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aconfig/ServerDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/client/DemoClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/client/DemoClient.java" />
       </list>
     </option>
   </component>
@@ -333,10 +274,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="826" />
+    <option name="width" value="1465" />
+    <option name="height" value="822" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -345,7 +286,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -426,6 +366,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +376,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557768846826" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557838135049" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -533,18 +474,29 @@
       <workItem from="1557747551412" duration="79000" />
       <workItem from="1557747632974" duration="876000" />
       <workItem from="1557748540472" duration="949000" />
-      <workItem from="1557757074079" duration="10793000" />
+      <workItem from="1557757074079" duration="11426000" />
+      <workItem from="1557817540170" duration="1200000" />
+      <workItem from="1557832887296" duration="2639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65816000" />
+    <option name="totallyTimeSpent" value="70288000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1465" height="822" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25931132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -554,19 +506,19 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32469305" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32831737" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.583691" visible="true" weight="0.40722892" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54462403" weight="0.32742155" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.5832748" visible="true" weight="0.5383562" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287858" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3287858" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.3287858" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3046632" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.416309" side_tool="true" weight="0.41280654" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.30273974" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.41672522" side_tool="true" weight="0.35197818" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49771392" weight="0.31062672" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49771392" weight="0.30958903" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -585,43 +537,41 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java</url>
-          <line>39</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/DemoApplication.java</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/client/DemoClient.java</url>
-          <line>43</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java</url>
-          <line>59</line>
+          <line>47</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/client/DemoClient.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java</url>
-          <line>30</line>
-          <properties class="com.controller.HelloServerController" method="test">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -744,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar!/org/apache/commons/pool2/impl/GenericObjectPool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.2/lombok-1.18.2.jar!/lombok/extern/slf4j/Slf4j.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -852,10 +795,69 @@
     <entry file="file://$PROJECT_DIR$/grpc.cloud.server.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/server/DemoServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-pool2/2.6.2/commons-pool2-2.6.2.jar!/org/apache/commons/pool2/impl/GenericObjectPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/grpc/dto/DemoServerGrpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+          <folding>
+            <element signature="e#4516#4517#0" expanded="true" />
+            <element signature="e#4544#4545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="144">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -866,97 +868,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/grpc/dto/DemoServerGrpc.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-          <folding>
-            <element signature="e#4516#4517#0" expanded="true" />
-            <element signature="e#4544#4545#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/server/DemoServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="286">
+          <caret line="36" column="35" selection-start-line="36" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="33" column="55" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/HelloServerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="147">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aconfig/ServerInfoConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientPoolFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" selection-start-line="26" selection-end-line="30" />
+        <state relative-caret-position="44">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClientProxyBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/client/DemoClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="71">
+          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -5,12 +5,12 @@ import com.grpc.dto.DemoResponse;
 import com.grpc.dto.DemoRquest;
 import com.grpc.dto.DemoServerGrpc;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 /**
  * 应用模块名称<p>
@@ -24,13 +24,18 @@ import javax.annotation.PostConstruct;
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class DemoClient  implements HelloService {
-    @Autowired
+    @Resource
     private DemoClientPoolFactory demoClientPoolFactory;
 
     protected DemoServerGrpc.DemoServerBlockingStub blockingStub;
 
+    public DemoClient(){
+        System.out.println("DemoClient inited");
+    }
+
     @PostConstruct
     public void postConstruct(){
+        System.out.println("DemoClient postInited");
         System.out.println("demoClientProxyBase.channel:"+DemoClientProxyBase.channelPointer.channel==null);
     }
 
@@ -48,7 +53,7 @@ public class DemoClient  implements HelloService {
             return "fail";
         } finally {
             try {
-                demoClientPoolFactory.returnObject(this);
+                DemoClientPoolFactory.demoClientPoolFactory.returnObject(this);
             } catch (Exception e) {
                 log.info("DemoClientPoolFactory.returnObject error ,e:" + e);
             }

@@ -28,9 +28,13 @@ public class DemoClientProxyBase {
     protected ManagedChannel channel;
 
     public static DemoClientProxyBase channelPointer;
+    public DemoClientProxyBase(){
+        System.out.println("DemoClientProxyBase inited");
+    }
 
     @PostConstruct
     public void init(){
+        System.out.println("DemoClientProxyBase postInited");
         start();
         channelPointer=this;
     }
