@@ -7,6 +7,7 @@ import io.grpc.ServerBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -27,12 +28,15 @@ public class DemoServer implements InitializingBean {
     private ServerDto serverDto;
     @Autowired
     private MyDemoServerImpl myDemoServerImpl;
+    @Autowired
+    private ConsulDiscoveryClient discoveryClient;
 
     @Override
     public void afterPropertiesSet() throws Exception {
         start(serverDto, myDemoServerImpl);
         startDaemonAwaitThread();
     }
+
 
     private void start(ServerDto serverDto, MyDemoServerImpl myDemoServerImpl) throws IOException {
         /* The port on which the com.grpc.server should run */

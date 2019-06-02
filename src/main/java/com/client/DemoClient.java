@@ -5,12 +5,11 @@ import com.grpc.dto.DemoResponse;
 import com.grpc.dto.DemoRquest;
 import com.grpc.dto.DemoServerGrpc;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
 
 /**
  * 应用模块名称<p>
@@ -22,12 +21,16 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@DependsOn("demoClientProxyBase")
 public class DemoClient  implements HelloService {
-    @Resource
-    private DemoClientPoolFactory demoClientPoolFactory;
+
+    @Autowired
+    private DemoClientProxyBase demoClientProxyBase;
 
     protected DemoServerGrpc.DemoServerBlockingStub blockingStub;
+
+
 
     public DemoClient(){
         System.out.println("DemoClient inited");
@@ -36,12 +39,13 @@ public class DemoClient  implements HelloService {
     @PostConstruct
     public void postConstruct(){
         System.out.println("DemoClient postInited");
-        System.out.println("demoClientProxyBase.channel:"+DemoClientProxyBase.channelPointer.channel==null);
+        System.out.println("demoClientProxyBase.channel:"+demoClientProxyBase.channel==null);
     }
 
     @Override
     public String hello(String input) {
-        blockingStub = DemoServerGrpc.newBlockingStub(DemoClientProxyBase.channelPointer.channel);
+        demoClientProxyBase.start();
+        blockingStub = DemoServerGrpc.newBlockingStub(demoClientProxyBase.channel);
         log.info("rpc hello method call started");
         DemoRquest request = DemoRquest.newBuilder().setCode(1).setMsg(input).build();
         DemoResponse response;
@@ -49,7 +53,7 @@ public class DemoClient  implements HelloService {
             response = blockingStub.hello(request);
             return Thread.currentThread().getName() + response.getCode() + ":" + response.getMsg();
         } catch (Exception e) {
-            log.error("rpc client call server fail :", e);
+            log.error("rpc register call server fail :", e);
             return "fail";
         } finally {
             try {

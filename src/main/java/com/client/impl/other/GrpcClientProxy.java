@@ -1,19 +1,19 @@
-package com.client;
+package com.client.impl.other;
 
-import com.aconfig.ServerDto;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.stub.AbstractStub;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.PostConstruct;
+import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -24,42 +24,37 @@ import java.util.concurrent.TimeUnit;
  *
  * @Author: liujiangfeng
  * Company: 跟谁学<p>
- * @Date: 2019-05-12
+ * @Date: 2019-06-02
  */
 @Component
+@Data
 @Slf4j
-@DependsOn("consulDiscoveryClient")
-public class DemoClientProxyBase{
-    @Autowired
-    protected ServerDto serverDto;
-
+public class GrpcClientProxy {
     protected ManagedChannel channel;
     @Autowired
     private ConsulDiscoveryClient discoveryClient;
     @Autowired
     private LoadBalancerClient loadBalancerClient;
+
+    protected AbstractStub blockingStub;
     @Value("${application.name}")
     private String appName;
 
-  //  public static DemoClientProxyBase channelPointer;
-    public DemoClientProxyBase(){
-        System.out.println("DemoClientProxyBase inited");
+    public String proxyOneMethod(Class<? extends AbstractStub> blockingStub,String methodName,Object paramRequest){
+        try{
+            Constructor cla = blockingStub.getDeclaredConstructor(AbstractStub.class);
+            //this.blockingStub=cla.newInstance(channel);
+        }catch (Exception e){
+            log.error("info error");
+        }
+        return null;
     }
 
-    @PostConstruct
-    public void init(){
-        System.out.println("DemoClientProxyBase postInited");
- //       channelPointer=this;
-//        start();
-    }
-
-    public void start() {
+    public void init() {
         if(channel==null){
             log.info("DemoClient InitializingBean started");
             String[] ipAndName = getIpAndName();
             channel = ManagedChannelBuilder.forAddress(ipAndName[0], Integer.parseInt(ipAndName[1]))
-                // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
-                // needing certificates.
                 .usePlaintext().build();
             log.info("DemoClient InitializingBean over");
         }

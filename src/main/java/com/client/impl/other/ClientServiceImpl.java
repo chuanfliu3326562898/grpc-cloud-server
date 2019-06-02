@@ -1,4 +1,4 @@
-package com.client;
+package com.client.impl.other;
 
 import com.aconfig.ServerDto;
 import io.grpc.ManagedChannel;
@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -24,12 +22,11 @@ import java.util.concurrent.TimeUnit;
  *
  * @Author: liujiangfeng
  * Company: 跟谁学<p>
- * @Date: 2019-05-12
+ * @Date: 2019-06-02
  */
 @Component
 @Slf4j
-@DependsOn("consulDiscoveryClient")
-public class DemoClientProxyBase{
+public class ClientServiceImpl implements ClientInterface {
     @Autowired
     protected ServerDto serverDto;
 
@@ -41,17 +38,7 @@ public class DemoClientProxyBase{
     @Value("${application.name}")
     private String appName;
 
-  //  public static DemoClientProxyBase channelPointer;
-    public DemoClientProxyBase(){
-        System.out.println("DemoClientProxyBase inited");
-    }
 
-    @PostConstruct
-    public void init(){
-        System.out.println("DemoClientProxyBase postInited");
- //       channelPointer=this;
-//        start();
-    }
 
     public void start() {
         if(channel==null){
@@ -78,5 +65,12 @@ public class DemoClientProxyBase{
         System.out.println("DemoClientProxyBase.getIpAndName:"+ Arrays.toString(ipAndName));
         return ipAndName;
 
+    }
+    @Override public String hello() {
+        return null;
+    }
+
+    @Override public String hello2() {
+        return null;
     }
 }

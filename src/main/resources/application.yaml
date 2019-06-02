@@ -1,2 +1,18 @@
-server:
-  port: 8080
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: dev
+        healthCheckPath: /info.json
+        healthCheckInterval: 5s
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        service-name: app
+  application:
+    name: cosulservice
+rpc:
+  servers:
+  - 127.0.0.1
+  - 127.0.0.2
+  - 127.0.0.3

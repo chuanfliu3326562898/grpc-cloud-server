@@ -5,11 +5,13 @@ import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.commons.pool2.impl.GenericObjectPool;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@DependsOn("demoClient")
 public class DemoClientPoolFactory extends BasePooledObjectFactory<DemoClient> {
 
     public static DemoClientPoolFactory demoClientPoolFactory;

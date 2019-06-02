@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.client.DemoClient;
 import com.client.DemoClientPoolFactory;
 import com.aconfig.ServerDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,12 @@ public class HelloServerController {
     ServerDto serverDto;
     @Autowired
     DemoClientPoolFactory demoClientPoolFactory;
+    @Autowired
+    DemoClient demoClient;
 
     @GetMapping("/rpc") public String rpc() throws Exception {
-        String result=demoClientPoolFactory.getInstance().borrowObject().hello("test");
+        //String result=demoClientPoolFactory.borrowObject().hello("test");
+        String result=demoClient.hello("test");
         return serverDto == null ? serverDto.getIp() : result;
     }
     @GetMapping("/test")
