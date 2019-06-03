@@ -5,6 +5,8 @@ import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.commons.pool2.impl.GenericObjectPool;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +14,10 @@ import javax.annotation.PostConstruct;
 
 @Component
 @DependsOn("demoClient")
+@ComponentScan(lazyInit = true)
 public class DemoClientPoolFactory extends BasePooledObjectFactory<DemoClient> {
+    @Autowired
+    private DemoClientProxyBase demoClientProxyBase;
 
     public static DemoClientPoolFactory demoClientPoolFactory;
 
@@ -60,7 +65,7 @@ public class DemoClientPoolFactory extends BasePooledObjectFactory<DemoClient> {
 
     @Override
     public DemoClient create() throws Exception {
-        return new DemoClient();
+        return new DemoClient(demoClientProxyBase);
     }
 
     @Override

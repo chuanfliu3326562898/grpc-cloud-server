@@ -6,7 +6,9 @@ import com.grpc.dto.DemoRquest;
 import com.grpc.dto.DemoServerGrpc;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -21,9 +23,10 @@ import javax.annotation.PostConstruct;
  */
 @Slf4j
 @Component
-//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @DependsOn("demoClientProxyBase")
 public class DemoClient  implements HelloService {
+    private static int count=0;
 
     @Autowired
     private DemoClientProxyBase demoClientProxyBase;
@@ -31,11 +34,13 @@ public class DemoClient  implements HelloService {
     protected DemoServerGrpc.DemoServerBlockingStub blockingStub;
 
 
-
     public DemoClient(){
-        System.out.println("DemoClient inited");
+        System.out.println("demoClientProxyBase:"+demoClientProxyBase==null+"DemoClient inited"+count++);
     }
-
+    public DemoClient(DemoClientProxyBase demoClientProxyBase){
+        this.demoClientProxyBase=demoClientProxyBase;
+        System.out.println("demoClientProxyBase:"+demoClientProxyBase==null+"DemoClient inited"+count++);
+    }
     @PostConstruct
     public void postConstruct(){
         System.out.println("DemoClient postInited");

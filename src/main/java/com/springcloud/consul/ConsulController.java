@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
+import org.springframework.cloud.consul.serviceregistry.ConsulAutoServiceRegistration;
 import org.springframework.cloud.consul.serviceregistry.ConsulRegistration;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -30,8 +30,14 @@ public class ConsulController {
     private  ConsulClient consulClient;
     @Autowired
     private  ConsulRegistration consulRegistration;
+    @Autowired(required=false)
+    private ConsulAutoServiceRegistration consulAutoServiceRegistration;
 
+    @Value("${application.rpc.server.port}")
+    private String port;
 
+    @Value("${application.hostip}")
+    private String ip;
     /**
      * 获取所有服务
      */
@@ -50,6 +56,23 @@ public class ConsulController {
         String serviceid=discoveryClient.getInstances("test-grpc-consul:127.0.0.1:50052").toString();
         return servicename+"\n"+serviceid;
     }
+
+    @RequestMapping("/service/regtest")
+    public String regtest() {
+        consulRegistration.getService().setPort(Integer.valueOf(port));
+        consulRegistration.getService().setAddress(ip);
+        consulRegistration.getService().setId(appName + ":" + ip + ":2" + port);
+        consulRegistration.getService().setName(appName);
+        consulRegistration.getService().setTags(Arrays.asList("V3"));
+        consulAutoServiceRegistration.start();
+        return "ok";
+    }
+
+    @GetMapping("/service/loadBlance")
+    public String loadBlance(@RequestParam String name) {
+        return loadBalancerClient.choose(name).toString();
+    }
+
 
     @DeleteMapping("api/deregister")
     public void deregister() {

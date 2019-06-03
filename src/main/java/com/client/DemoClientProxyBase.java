@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -56,8 +55,8 @@ public class DemoClientProxyBase{
     public void start() {
         if(channel==null){
             log.info("DemoClient InitializingBean started");
-            String[] ipAndName = getIpAndName();
-            channel = ManagedChannelBuilder.forAddress(ipAndName[0], Integer.parseInt(ipAndName[1]))
+            ServiceInstance ipAndName = getIpAndName();
+            channel = ManagedChannelBuilder.forAddress(ipAndName.getHost(), ipAndName.getPort())
                 // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
                 // needing certificates.
                 .usePlaintext().build();
@@ -69,14 +68,13 @@ public class DemoClientProxyBase{
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
-    private String[] getIpAndName(){
+    private ServiceInstance getIpAndName(){
         List<ServiceInstance> results=discoveryClient.getInstances(appName);
         if(CollectionUtils.isEmpty(results)){
             return null;
         }
-        String[] ipAndName = {results.get(0).getHost(), String.valueOf(results.get(0).getPort())};
-        System.out.println("DemoClientProxyBase.getIpAndName:"+ Arrays.toString(ipAndName));
-        return ipAndName;
-
+        ServiceInstance serviceInstance=loadBalancerClient.choose(appName);
+        System.out.println("DemoClientProxyBase.getIpAndName:"+ serviceInstance.toString());
+        return serviceInstance;
     }
 }
