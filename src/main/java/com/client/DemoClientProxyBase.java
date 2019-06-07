@@ -11,7 +11,6 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -40,7 +39,6 @@ public class DemoClientProxyBase{
     @Value("${application.name}")
     private String appName;
 
-  //  public static DemoClientProxyBase channelPointer;
     public DemoClientProxyBase(){
         System.out.println("DemoClientProxyBase inited");
     }
@@ -48,8 +46,6 @@ public class DemoClientProxyBase{
     @PostConstruct
     public void init(){
         System.out.println("DemoClientProxyBase postInited");
- //       channelPointer=this;
-//        start();
     }
 
     public void start() {
@@ -70,9 +66,9 @@ public class DemoClientProxyBase{
 
     private ServiceInstance getIpAndName(){
         List<ServiceInstance> results=discoveryClient.getInstances(appName);
-        if(CollectionUtils.isEmpty(results)){
-            return null;
-        }
+//        if(CollectionUtils.isEmpty(results)){
+//            return null;
+//        }
         ServiceInstance serviceInstance=loadBalancerClient.choose(appName);
         System.out.println("DemoClientProxyBase.getIpAndName:"+ serviceInstance.toString());
         return serviceInstance;

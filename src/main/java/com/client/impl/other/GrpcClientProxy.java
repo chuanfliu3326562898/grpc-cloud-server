@@ -43,7 +43,8 @@ public class GrpcClientProxy {
     public String proxyOneMethod(Class<? extends AbstractStub> blockingStub,String methodName,Object paramRequest){
         try{
             Constructor cla = blockingStub.getDeclaredConstructor(AbstractStub.class);
-            //this.blockingStub=cla.newInstance(channel);
+            this.blockingStub=(AbstractStub)cla.newInstance(channel);
+            //jdk
         }catch (Exception e){
             log.error("info error");
         }

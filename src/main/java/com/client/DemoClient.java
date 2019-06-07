@@ -11,8 +11,6 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 /**
  * 应用模块名称<p>
  * 代码描述<获取所有阶段返回dto>
@@ -40,11 +38,6 @@ public class DemoClient  implements HelloService {
     public DemoClient(DemoClientProxyBase demoClientProxyBase){
         this.demoClientProxyBase=demoClientProxyBase;
         System.out.println("demoClientProxyBase:"+demoClientProxyBase==null+"DemoClient inited"+count++);
-    }
-    @PostConstruct
-    public void postConstruct(){
-        System.out.println("DemoClient postInited");
-        System.out.println("demoClientProxyBase.channel:"+demoClientProxyBase.channel==null);
     }
 
     @Override
