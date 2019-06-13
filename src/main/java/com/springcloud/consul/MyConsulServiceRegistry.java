@@ -12,7 +12,7 @@ import org.springframework.cloud.consul.serviceregistry.ConsulServiceRegistry;
  * 代码描述<p>
  *
  * @Auther: Yummyxl
- * Company: 跟谁学<p>
+ * <p>
  * @Date: 2019/4/28 15:04
  */
 public class MyConsulServiceRegistry extends ConsulServiceRegistry {

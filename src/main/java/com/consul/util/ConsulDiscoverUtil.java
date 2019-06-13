@@ -7,7 +7,7 @@ import java.util.Map;
  * 代码描述<获取所有阶段返回dto>
  *
  * @Author: liujiangfeng
- * Company: 跟谁学<p>
+ * <p>
  * @Date: 2019-06-02
  */
 public class ConsulDiscoverUtil {
