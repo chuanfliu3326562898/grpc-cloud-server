@@ -23,7 +23,7 @@
     <properties>
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
         <fastjson.version>1.2.47</fastjson.version>
-        <grpc.version>1.18.0</grpc.version>
+        <grpc.version>1.53.0</grpc.version>
     </properties>
 
     <dependencyManagement>
